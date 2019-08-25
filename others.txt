@@ -1,0 +1,23 @@
+import os
+from boto3 import s3
+
+def lambda_handler(event, context):
+    cmd = 'openssl req -new -newkey rsa:2048 -nodes -keyout server.key'
+    cmd2 = 'ls -lart'
+    os.system(cmd)
+    os.system(cmd2)
+    
+    f = open('/tmp/server.key','wb')
+    f.write(server.key)
+    f.close()
+  
+    #s3 = boto.client('s3')
+    bucket_name = 'my-bucket'
+    s3.upload_file('/tmp/server.key',bucket_name,'server.key')
+    
+    
+   ------------------------------------------------------------
+   
+   https://kite.com/python/examples/4916/crypto-generate-an-ssh-key-pair
+   https://github.com/droidlabour/git_intgrtn_aws_s3/tree/master/CreateSSHKey
+   https://www.programcreek.com/python/example/87933/Crypto.PublicKey.RSA.generate
