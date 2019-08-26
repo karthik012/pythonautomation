@@ -1,0 +1,50 @@
+Task 1:
+
+a. Need a main function to call the other fucntions.
+b. Sub fucntions to be called based on the parameter passed to the main
+Example :
+
+Taking an example of java, please consider python
+
+public static void main(..){
+//A global variable INPUT
+
+          if INPUT== A , method1(arg1);  //call method1 if the input is A,
+          
+          if INPUT== B , method(arg1,arg2); //call method2 if input is B ..
+          
+          //a try catch to validate the input, should not call the methond if it is not a valid string
+          //a check to validate the a regX pattern of the arg1
+          //pattern = ip-172-61-49-90.eu-central-1.compute.internal
+          //if patter is not matching throw error         
+}
+
+
+Task2:
+You will have a dictionary 
+
+{
+    'Certificate': 'string',
+    'CertificateChain': 'string'
+}
+
+parse this first string Certificate to a seperate file and store it is a file1.cert
+
+the second string will be like this :
+
+-----BEGIN CERTIFICATE-----                      //1
+content of your domain certificate               //2
+-----END CERTIFICATE-----                        //3
+...
+-----BEGIN CERTIFICATE-----                     //4
+content of any intermediate CA certificate      //5
+-----END CERTIFICATE-----                       //6
+...
+-----BEGIN CERTIFICATE-----
+content of root CA certeficate
+-----END CERTIFICATE-----
+
+
+have to write from //1 to //3 into file called file2.cert
+have to write from //4 to //6 into file called file3.cert
+
